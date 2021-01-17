@@ -1,0 +1,21 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// If you want to override variables do it here
+@import "variables";
+
+// Bootstrap
+//@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import "~@coreui/coreui/scss/coreui";
+
+// Global
+@import 'global';
+
+// Pages
+@import 'pages/dashboard';
+
+// Bootstrap Overrides
+@import 'custom';
+
+// Plugins
+

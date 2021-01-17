@@ -1,0 +1,524 @@
+[
+    {
+        "code": "TEST",
+        "name": "Test Client",
+        "email": "test@test.com",
+        "phone": "1234567890",
+        "website": "test.com",
+        "cvars": "wb",
+        "status": 1
+    },
+    {
+        "code": "WEBB",
+        "name": "WebBox Tech",
+        "email": "",
+        "phone": "",
+        "website": "",
+        "cvars": "wb",
+        "status": 1
+    },
+    {
+        "code": "BRND",
+        "name": "Branded Research",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "uid",
+        "status": 1
+    },
+    {
+        "code": "FEDS",
+        "name": "Federated Sample",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "PID",
+        "status": 0
+    },
+    {
+        "code": "INOV",
+        "name": "Innovate",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "INV,PID,aff_sub",
+        "status": 1
+    },
+    {
+        "code": "INST",
+        "name": "Instantly",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "MID",
+        "status": 1
+    },
+    {
+        "code": "ROIR",
+        "name": "Oceanside Ten(ROI)",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "s1",
+        "status": 1
+    },
+    {
+        "code": "SSII",
+        "name": "SSI",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "aff_sub, aff_sub3, aff_sub2, aff_sub4,url_id",
+        "status": 1
+    },
+    {
+        "code": "PHMI",
+        "name": "Phoenix Marketing",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "PID",
+        "status": 1
+    },
+    {
+        "code": "QUAL",
+        "name": "Qualtrics",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "spid",
+        "status": 1
+    },
+    {
+        "code": "RFGC",
+        "name": "Research for Good",
+        "email": "andy@researchforgood.com",
+        "phone": "-10841",
+        "website": "www.researchforgood.com",
+        "cvars": "tid, rid, sjid, UID",
+        "status": 1
+    },
+    {
+        "code": "REIL",
+        "name": "Research Illuninas",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "pid",
+        "status": 1
+    },
+    {
+        "code": "MAFI",
+        "name": "Massfinity",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "s2, aff_sub2",
+        "status": 1
+    },
+    {
+        "code": "PRDM",
+        "name": "Paradigm ",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "sjid, RID",
+        "status": 1
+    },
+    {
+        "code": "ERES",
+        "name": "Empirical Reponse",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "rid",
+        "status": 1
+    },
+    {
+        "code": "IRES",
+        "name": "I Research Services",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "psid",
+        "status": 1
+    },
+    {
+        "code": "CMIX",
+        "name": "Critical Mix",
+        "email": "test@test.com",
+        "phone": "213-422-2108",
+        "website": "www.criticalmix.com",
+        "cvars": "sjid,VRID",
+        "status": 1
+    },
+    {
+        "code": "MANT",
+        "name": "Manthan",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "sjid, pid",
+        "status": 1
+    },
+    {
+        "code": "FGLB",
+        "name": "Field Global",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "pid,rid",
+        "status": 1
+    },
+    {
+        "code": "PNLD",
+        "name": "Paneland",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "uid",
+        "status": 1
+    },
+    {
+        "code": "TOLU",
+        "name": "Toluna",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "ids, sjid",
+        "status": 1
+    },
+    {
+        "code": "EMIR",
+        "name": "Emi Reserch",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "sjid,PARTNER_ID",
+        "status": 1
+    },
+    {
+        "code": "SPID",
+        "name": "Spider Metrix",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "pid",
+        "status": 1
+    },
+    {
+        "code": "GFKC",
+        "name": "GfK Cross MediaLink Global",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "sjid,extid,aff_sub,aff_sub3",
+        "status": 1
+    },
+    {
+        "code": "ETER",
+        "name": "e2e Research",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "sjid,pid",
+        "status": 1
+    },
+    {
+        "code": "COGR",
+        "name": "Cogitate Research",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "uid,monId,pid",
+        "status": 1
+    },
+    {
+        "code": "KNEX",
+        "name": "Knowledge Excel",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "id",
+        "status": 1
+    },
+    {
+        "code": "DECR",
+        "name": "DECISIVE RESEARCH",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "uid",
+        "status": 1
+    },
+    {
+        "code": "APSI",
+        "name": "APSI Data",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "vid",
+        "status": 1
+    },
+    {
+        "code": "GLBS",
+        "name": "Global Survey",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "pid",
+        "status": 1
+    },
+    {
+        "code": "MCUB",
+        "name": "Market Cube",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "sjid,PID,LID,rid",
+        "status": 1
+    },
+    {
+        "code": "WOML",
+        "name": "World Outsourcing Matrix Ltd",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "sjid",
+        "status": 1
+    },
+    {
+        "code": "DSOC",
+        "name": "Dynamic Sample Online",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "ref_code",
+        "status": 1
+    },
+    {
+        "code": "TACH",
+        "name": "Tache Tach",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "id,psid",
+        "status": 1
+    },
+    {
+        "code": "P2SA",
+        "name": "P2Sample",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "ssi",
+        "status": 1
+    },
+    {
+        "code": "PROD",
+        "name": "ProdegeMR",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "PID,vpid",
+        "status": 1
+    },
+    {
+        "code": "BLDI",
+        "name": "Bilendi",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "id,m",
+        "status": 1
+    },
+    {
+        "code": "AKLC",
+        "name": "AZURE",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "trans_id",
+        "status": 1
+    },
+    {
+        "code": "STCR",
+        "name": "Syntellectresearch",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "pid,BID,sjid",
+        "status": 1
+    },
+    {
+        "code": "CYBR",
+        "name": "Cyber age",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "respid",
+        "status": 1
+    },
+    {
+        "code": "EPIT",
+        "name": "Epitome Research Services",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "pid",
+        "status": 1
+    },
+    {
+        "code": "RRPL",
+        "name": "Robas Research Pvt. Ltd",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "si,id",
+        "status": 1
+    },
+    {
+        "code": "OP4G",
+        "name": "Op4g",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "uid",
+        "status": 1
+    },
+    {
+        "code": "GMRC",
+        "name": "Genmarc Research",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "id",
+        "status": 1
+    },
+    {
+        "code": "SVCT",
+        "name": "SV Connect",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "wc,sjid",
+        "status": 1
+    },
+    {
+        "code": "PURE",
+        "name": "Pureprofile",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "S1, rid",
+        "status": 1
+    },
+    {
+        "code": "TACT",
+        "name": "ThinkAction",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "thinkaction.com",
+        "cvars": "s2",
+        "status": 1
+    },
+    {
+        "code": "ERSP",
+        "name": "EaResponse",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "resp_id",
+        "status": 1
+    },
+    {
+        "code": "ADSM",
+        "name": "AD Smart Media",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "Ref id,sub1",
+        "status": 1
+    },
+    {
+        "code": "SAMP",
+        "name": "Samp Point",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "sjid",
+        "status": 1
+    },
+    {
+        "code": "PGRS",
+        "name": "Progresso Research",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "sjid",
+        "status": 1
+    },
+    {
+        "code": "QMDS",
+        "name": "Quest MindShare",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "id,ID",
+        "status": 1
+    },
+    {
+        "code": "SNRS",
+        "name": "Schnell Research",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "psid,sjid",
+        "status": 1
+    },
+    {
+        "code": "KWSC",
+        "name": "Key Way Services cooperation",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "kwid",
+        "status": 1
+    },
+    {
+        "code": "CASH",
+        "name": "Cash Network",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "cashnetwork.com",
+        "cvars": "tid,s3",
+        "status": 1
+    },
+    {
+        "code": "SSIB",
+        "name": "SSIB",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "aff_sub2",
+        "status": 1
+    },
+    {
+        "code": "RMRR",
+        "name": "RMR",
+        "email": "wael@rmr-research.com",
+        "phone": "00966 503 156 429",
+        "website": "www.test.com",
+        "cvars": "ID,Pid",
+        "status": 1
+    },
+    {
+        "code": "TNBG",
+        "name": "TNB Global Fieldworx",
+        "email": "test@test.com",
+        "phone": "999-999-9999",
+        "website": "www.test.com",
+        "cvars": "pid",
+        "status": 1
+    }
+]
