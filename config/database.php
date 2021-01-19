@@ -88,7 +88,6 @@ return [
         //         'database' => 'admin' // sets the authentication database required by mongo 3
         //     ]
         // ],
-
         'mongodb' => [
             'driver' => 'mongodb',
             'dsn' => env('DB_DSN'),
