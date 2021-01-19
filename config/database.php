@@ -77,16 +77,21 @@ return [
             'strict' => true,
             'engine' => null,
         ],
+        // 'mongodb' => [
+        //     'driver' => 'mongodb',
+        //     'host' => env('MONGO_DB_HOST', 'localhost:81'),
+        //     'port' => env('MONGO_DB_PORT', 27017),
+        //     'database' => env('MONGO_DB_DATABASE','apace_temp'),
+        //     // 'username' => env('MONGO_DB_USERNAME','root'),
+        //     // 'password' => env('MONGO_DB_PASSWORD','root'),
+        //     'options' => [
+        //         'database' => 'admin' // sets the authentication database required by mongo 3
+        //     ]
+        // ],
         'mongodb' => [
             'driver' => 'mongodb',
-            'host' => env('MONGO_DB_HOST', 'localhost:81'),
-            'port' => env('MONGO_DB_PORT', 27017),
-            'database' => env('MONGO_DB_DATABASE','apace_temp'),
-            // 'username' => env('MONGO_DB_USERNAME','root'),
-            // 'password' => env('MONGO_DB_PASSWORD','root'),
-            'options' => [
-                'database' => 'admin' // sets the authentication database required by mongo 3
-            ]
+            'dsn' => env('DB_DSN'),
+            'database' => env('DB_DATABASE', 'homestead'),
         ],
 
         'mongodb_live' => [
