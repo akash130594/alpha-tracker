@@ -95,17 +95,17 @@ return [
             'database' => env('MONGO_DB_DATABASE', 'homestead'),
         ],
 
-        'mongodb_live' => [
-            'driver' => 'mongodb',
-            'host' => env('MONGO_DB_LIVE_HOST', 'localhost:81'),
-            'port' => env('MONGO_DB_LIVE_PORT', 27017),
-            'database' => env('MONGO_DB_LIVE_DATABASE','apace'),
-            'username' => env('MONGO_DB_LIVE_USERNAME','apace_mongo'),
-            'password' => env('MONGO_DB_LIVE_PASSWORD','&bxBREW22re'),
-            'options' => [
-                'database' => 'admin' // sets the authentication database required by mongo 3
-            ]
-        ],
+        // 'mongodb_live' => [
+        //     'driver' => 'mongodb',
+        //     'host' => env('MONGO_DB_LIVE_HOST', 'localhost:81'),
+        //     'port' => env('MONGO_DB_LIVE_PORT', 27017),
+        //     'database' => env('MONGO_DB_LIVE_DATABASE','apace'),
+        //     'username' => env('MONGO_DB_LIVE_USERNAME','apace_mongo'),
+        //     'password' => env('MONGO_DB_LIVE_PASSWORD','&bxBREW22re'),
+        //     'options' => [
+        //         'database' => 'admin' // sets the authentication database required by mongo 3
+        //     ]
+        // ],
 
         'pgsql' => [
             'driver' => 'pgsql',
