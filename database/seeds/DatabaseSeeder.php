@@ -34,7 +34,6 @@ class DatabaseSeeder extends Seeder
 
         $this->call(SourceBatchSeeder::class);
         $this->call(ProjectBatchSeeder::class);
-        $this->call(SJPanelBatchSeeder::class);
         $this->call(ApaceTempBatchSeeder::class);
 
         Model::reguard();
