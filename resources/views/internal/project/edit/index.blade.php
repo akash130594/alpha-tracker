@@ -177,19 +177,18 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                @php dd("asdas"); @endphp
                                                 <div class="dedupe_action date_range col-12">
                                                     <label>
                                                         Dedupe From Archive:
                                                     </label>&nbsp;
-                                                    <input type="checkbox" @if($dedupe_filter['type']=="date_range" && !empty($dedupe_filter['archive']))) checked @endif  name="dedupe[data][archive]" value="1"><br>
+                                                    <input type="checkbox" @if($dedupe_filter && $dedupe_filter['type']=="date_range" && !empty($dedupe_filter['archive']))) checked @endif  name="dedupe[data][archive]" value="1"><br>
                                                     <div class="row">
                                                         <div class="form-group col-sm-6">
                                                             <div class="form-group ">
                                                                 @php
                                                                     $from_date = null;
                                                                     $to_date = null;
-                                                                    if($dedupe_filter['type']=='date_range'){
+                                                                    if($dedupe_filter && $dedupe_filter['type']=='date_range'){
                                                                     foreach($dedupe_filter as $key=>$value){
                                                                     if($key=="content"){
                                                                        $from_date = $value['from_date'];
@@ -214,7 +213,7 @@
                                                     <label>
                                                         Dedupe From Archive:
                                                     </label>&nbsp;
-                                                    <input type="checkbox" @if($dedupe_filter['type']=="client_dedupe" && !empty($dedupe_filter['archive']))) checked @endif  name="dedupe[data][archive]" value="1"><br>
+                                                    <input type="checkbox" @if($dedupe_filter && $dedupe_filter['type']=="client_dedupe" && !empty($dedupe_filter['archive']))) checked @endif  name="dedupe[data][archive]" value="1"><br>
                                                     <div class="row">
                                                         <div class="form-group col-sm-6">
                                                             {!!Form::select('dedupe[data][client_dedupe]', 'Client Name', $clients, $project->client_id)!!}
@@ -225,11 +224,11 @@
                                                     <label>
                                                         Dedupe From Archive:
                                                     </label>&nbsp;
-                                                    <input type="checkbox" @if($dedupe_filter['type']=="wildcard_dedupe" && !empty($dedupe_filter['archive'])) checked @endif  name="dedupe[data][archive]" value="1"><br>
+                                                    <input type="checkbox" @if($dedupe_filter && $dedupe_filter['type']=="wildcard_dedupe" && !empty($dedupe_filter['archive'])) checked @endif  name="dedupe[data][archive]" value="1"><br>
                                                     <div class="row">
                                                         <div class="form-group col-sm-12">
                                                             <label>Survey Name Starts with</label>
-                                                            <input class="form-control" type="text" @if($dedupe_filter['type']=="wildcard_dedupe") value="{{$dedupe_filter['content'] }}" @endif name="dedupe[data][wildcard_dedupe]">
+                                                            <input class="form-control" type="text" @if($dedupe_filter && $dedupe_filter['type']=="wildcard_dedupe") value="{{$dedupe_filter['content'] }}" @endif name="dedupe[data][wildcard_dedupe]">
                                                             {{--{!!Form::text('dedupe[data][wildcard_dedupe]', 'Survey Name Starts with')!!}--}}
                                                         </div>
                                                     </div>
