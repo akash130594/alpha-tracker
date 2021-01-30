@@ -59,7 +59,6 @@
                                             @endif
                                         </div>
                                     </div>
-                                    @php dd("hiiee"); @endphp
                                     <div class="row">
                                         <div class="form-group col-sm-12 client_links">
                                             {!!Form::text('client_link', 'Client Link', $project->client_link)->id('client_link')->placeholder('Client Link')!!}
@@ -79,6 +78,7 @@
                                             </div>--}}
                                         </div>
                                     </div>
+                                    @php dd("ashiiee"); @endphp
                                     <div class="row">
                                         <div class="form-group col-sm-6">
                                             {!!Form::text('country_id', 'Country')->disabled(true)->value($country->name)!!}
