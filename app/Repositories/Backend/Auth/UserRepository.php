@@ -381,4 +381,10 @@ class UserRepository extends BaseRepository
         $update = Employee::where('id','=',$id)->update($data);
         return $update;
     }
+
+    public function getAllUsers()
+    {
+        $users = User::all();
+        return $users;
+    }
 }

@@ -91,7 +91,7 @@ return [
 
         'mongodb' => [
             'driver' => 'mongodb',
-            'dsn' => env('MONGO_DB_DSN', 'mongodb+srv://root:akash%400004@cluster0.ehihi.mongodb.net/apace_temp?retryWrites=true&w=majority'),
+            'dsn' => env('MONGO_DB_DSN', 'mongodb+srv://root:akash%400004@cluster0.ehihi.mongodb.net/test?retryWrites=true&w=majority'),
             'database' => env('MONGO_DB_DATABASE', 'homestead'),
         ],
 

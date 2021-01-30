@@ -51,7 +51,7 @@ class ProjectRepository extends BaseRepository
         return Project::class;
     }
 
-    
+
 
     public function createProject($details)
     {
@@ -122,7 +122,7 @@ class ProjectRepository extends BaseRepository
             }
         }
         $sycodelast = sprintf('%03d', $sycodelast);
-        $projectCode = $yearMonthDay . $sycodelast . $details['country_code'].$details['language_code'];
+        $projectCode = $yearMonthDay . $sycodelast . $details['country_code'];
         return $projectCode;
 
     }

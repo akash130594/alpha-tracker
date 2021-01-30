@@ -18,6 +18,7 @@ class DashboardController extends Controller
 
     public function index()
     {
+        $user = auth()->user();
         $employees = Employee::paginate(10);
         return view('internal.dashboard')
         ->with('employees', $employees);

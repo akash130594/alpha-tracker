@@ -95,7 +95,14 @@
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-sm-6">
-                                            {!! Form::text('end_date', 'End Date')->attrs(['data-toggle' => 'datetimepicker', 'data-target'=> '#end_date']) !!}
+                                            {!! Form::text('end_date', 'End Date') !!}
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            {{-- {!! Form::text('start_date', 'Start Date') !!} --}}
+                                            <div class="form-group bmd-form-group">
+                                                <label for="start_date" class="bmd-label-static">Start Date</label>
+                                                <input value="" type="text" name="start_date" id="start_date" class="form-control">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -338,7 +345,6 @@
                 allowClear: false,
                 height: '100%'
             }
-
             $('#countries').select2($select2Opttions);
             $('#languages').select2({
                 //minimumInputLength: 1,
@@ -402,35 +408,37 @@
                 }*/
             });
 
-            $.fn.datetimepicker.Constructor.Default = $.extend({}, $.fn.datetimepicker.Constructor.Default, {
-                icons: {
-                    time: 'far fa-clock',
-                    date: 'far fa-calendar-alt',
-                    up: 'fas fa-arrow-up',
-                    down: 'fas fa-arrow-down',
-                    previous: 'fas fa-chevron-left',
-                    next: 'fas fa-chevron-right',
-                    today: 'fas fa-calendar-check-o',
-                    clear: 'fas fa-trash',
-                    close: 'fas fa-times'
-                } });
-
+            // $.fn.datetimepicker.Constructor.Default = $.extend({}, $.fn.datetimepicker.Constructor.Default, {
+            //     icons: {
+            //         time: 'far fa-clock',
+            //         date: 'far fa-calendar-alt',
+            //         up: 'fas fa-arrow-up',
+            //         down: 'fas fa-arrow-down',
+            //         previous: 'fas fa-chevron-left',
+            //         next: 'fas fa-chevron-right',
+            //         today: 'fas fa-calendar-check-o',
+            //         clear: 'fas fa-trash',
+            //         close: 'fas fa-times'
+            //     } });
+            // jQuery('#end_date').datetimepicker({
+            //     timepicker:false,
+            //     format:'Y-m-d'
+            // });
             // With a custom message
             $('#survey-create').areYouSure( {'message':'Your profile details are not saved!'} );
 
             var date = new Date();
             var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
             console.log(today);
-            /*$('#start_date').datetimepicker({
-                format: 'YYYY-MM-DD hh:mm:ss',
-                setDate: new Date(),
-                showClose: true
-            });*/
+            $('#start_date').datepicker({
+                // format: 'YYYY-MM-DD hh:mm:ss',
+                // setDate: new Date(),
+                autoclose: true
+            });
 
             $('#end_date').datetimepicker({
-                format: 'YYYY-MM-DD hh:mm:ss',
-                setDate: addDays(15),
-                showClose: true
+                timepicker:false,
+                format:'Y-m-d'
             });
             $('#dedupe_from_date').datetimepicker({
                 //format: 'YYYY-MM-DD hh:mm:ss',
@@ -441,19 +449,19 @@
                 showClose: true
             });
 
-            function addDays(n){
-                var t = new Date();
-                t.setDate(t.getDate() + n);
-                var month = "0"+(t.getMonth()+1);
-                var date = "0"+t.getDate();
-                var hours = "0"+t.getHours();
-                var minutes = "0"+t.getMinutes();
-                var seconds = "0"+t.getSeconds();
-                month = month.slice(-2);
-                date = date.slice(-2);
-                var date = t.getFullYear()+"-"+month +"-"+date+" "+hours+":"+minutes+":"+seconds;
-                $('#end_date').val(date);
-            }
+            // function addDays(n){
+            //     var t = new Date();
+            //     t.setDate(t.getDate() + n);
+            //     var month = "0"+(t.getMonth()+1);
+            //     var date = "0"+t.getDate();
+            //     var hours = "0"+t.getHours();
+            //     var minutes = "0"+t.getMinutes();
+            //     var seconds = "0"+t.getSeconds();
+            //     month = month.slice(-2);
+            //     date = date.slice(-2);
+            //     var date = t.getFullYear()+"-"+month +"-"+date+" "+hours+":"+minutes+":"+seconds;
+            //     $('#end_date').val(date);
+            // }
 
             $('.test_client_link').on('click', function(e) {
                 $client_link = $('#client_link').val();

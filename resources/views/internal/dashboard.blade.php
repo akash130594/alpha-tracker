@@ -86,37 +86,43 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-6 col-md-12">
-              <div class="card">
-                <div class="card-header card-header-warning">
-                  <h4 class="card-title">Employees Stats</h4>
-                <p class="card-category">New employees on {{date('d F Y')}}</p>
+          @can('access employees')
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-warning">
+                    <h4 class="card-title">Employees Stats</h4>
+                    <p class="card-category">New employees on {{date('d F Y')}}</p>
+                    </div>
+                    <div class="card-body table-responsive">
+                    <table class="table table-hover">
+                        <thead class="text-warning">
+                        <th>Name</th>
+                        <th>Salary</th>
+                        <th>Position</th>
+                        <th>Date of Joining</th>
+                        <th>Emp. Id</th>
+                        <th>Email</th>
+                        </thead>
+                        <tbody>
+                            @foreach($employees as $employee)
+                                <tr>
+                                    <td>{{$employee->name}}</td>
+                                    <td>{{$employee->salary}}</td>
+                                    <td>{{$employee->position}}</td>
+                                    <td>{{$employee->doj}}</td>
+                                    <td>{{$employee->empid}}</td>
+                                    <td>{{$employee->email}}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                    {{$employees->links()}}
+                    </div>
                 </div>
-                <div class="card-body table-responsive">
-                  <table class="table table-hover">
-                    <thead class="text-warning">
-                      <th>Name</th>
-                      <th>Salary</th>
-                      <th>Position</th>
-                      <th>Email</th>
-                    </thead>
-                    <tbody>
-                        @foreach($employees as $employee)
-                            <tr>
-                                <td>{{$employee->name}}</td>
-                                <td>{{$employee->salary}}</td>
-                                <td>{{$employee->position}}</td>
-                                <td>{{$employee->email}}</td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                  </table>
-                  {{$employees->links()}}
                 </div>
-              </div>
             </div>
-          </div>
+          @endcan
         </div>
       </div>
 @endsection

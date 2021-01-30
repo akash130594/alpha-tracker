@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateProjectsTableAddUniqueLinksColumns extends Migration
+class AddUserIdToEmployees extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class UpdateProjectsTableAddUniqueLinksColumns extends Migration
      */
     public function up()
     {
-        Schema::table('projects', function (Blueprint $table) {
-            $table->longText('unique_parameters')
-                ->nullable()
-                ->after('client_screener_redirect_flag');
+        Schema::table('employees', function (Blueprint $table) {
+            $table->integer('user_id')->nullable(false);
         });
     }
 
@@ -27,8 +25,8 @@ class UpdateProjectsTableAddUniqueLinksColumns extends Migration
      */
     public function down()
     {
-        Schema::table('projects', function (Blueprint $table) {
-            $table->dropColumn('unique_parameters');
+        Schema::table('employees', function (Blueprint $table) {
+            $table->dropColumn('user_id');
         });
     }
 }

@@ -158,7 +158,9 @@ class UserController extends Controller
 
     public function addEmployee()
     {
-        return view('backend.auth.employee.create');
+        $users = $this->userRepository->getAllUsers();
+        return view('backend.auth.employee.create')
+        ->with('users', $users);
     }
 
     public function postEmployee(AddRequest $request)

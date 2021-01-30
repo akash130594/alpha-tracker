@@ -24,8 +24,17 @@
                 <div class="row mt-4 mb-4">
                     <div class="col">
                         <div class="form-group row">
+                            {{ html()->label(__('User'))->class('col-md-2 form-control-label')->for('user_id') }}
+                            <div class="col-md-10">
+                                <select class="form-control" id="user_id" name="user_id">
+                                    @foreach($users as $user)
+                                <option value={{$user->id}}>{{$user->first_name}} {{$user->last_name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             {{ html()->label(__('Employee Name'))->class('col-md-2 form-control-label')->for('name') }}
-
                             <div class="col-md-10">
                                 {{ html()->text('name')
                                     ->class('form-control')

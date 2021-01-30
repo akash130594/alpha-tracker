@@ -96,6 +96,7 @@ return [
             'access surveys',
             'access projects',
             'access archives',
+            'access employees',
             'access client security',
         ],
 

@@ -12,7 +12,7 @@
         </li>
         @can('access projects')
 
-            <li class="nav-item dropdown {{ active_class(Active::checkUriPattern('project/*'), 'open') }}">
+            <li class="nav-item dropdown ">
                 <a class="nav-link {{ active_class(Active::checkUriPattern('/project/*')) }}" href="#" id="projetDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="nav-icon icon-book-open"></i> @lang('Projects')
                 </a>
@@ -61,7 +61,7 @@
         @endcan
 
         @can('access general')
-        <li class="nav-item dropdown {{ active_class(Active::checkUriPattern('general/*'), 'open') }}">
+        <li class="nav-item dropdown">
             <a class="nav-link {{ active_class(Active::checkUriPattern('general/*')) }}" data-toggle="dropdown" id="generalDropdown" aria-expanded="false" aria-haspopup="true" href="#">
                 <i class="nav-icon icon-people"></i> General Management
             </a>

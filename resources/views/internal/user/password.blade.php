@@ -1,4 +1,4 @@
-@extends('internal.layouts.app')
+@extends('internal.layouts.new-app')
 
 @section('title', app_name() . ' | ' . __('navs.frontend.dashboard') )
 
@@ -32,7 +32,9 @@
                                     <p class="card-text">
 
                                         <a href="{{ route('internal.dashboard')}}" class="btn btn-info btn-sm mb-1">
-                                            <i class="fas fa-user-circle"></i> @lang('navs.frontend.user.account')
+                                            <span class="material-icons">
+                                                account_circle
+                                                </span> @lang('navs.frontend.user.account')
                                         </a>
 
                                         @can('view backend')

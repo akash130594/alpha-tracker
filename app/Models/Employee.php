@@ -15,6 +15,7 @@ class Employee extends Model
         'empid',
         'mobile_no',
         'status',
-        'email'
+        'email',
+        'user_id'
     ];
 }

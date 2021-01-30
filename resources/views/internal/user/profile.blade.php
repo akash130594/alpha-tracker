@@ -1,4 +1,4 @@
-@extends('internal.layouts.app')
+@extends('internal.layouts.new-app')
 
 @section('title', app_name() . ' | ' . __('navs.frontend.dashboard') )
 
@@ -19,7 +19,7 @@
 
                                 <div class="card-body">
                                     <h4 class="card-title">
-                                        {{ $logged_in_user->name }} TADA<br/>
+                                        {{ $logged_in_user->name }} <br/>
                                     </h4>
 
                                     <p class="card-text">
@@ -32,7 +32,9 @@
                                     <p class="card-text">
 
                                         <a href="{{ route('internal.dashboard')}}" class="btn btn-info btn-sm mb-1">
-                                            <i class="fas fa-user-circle"></i> @lang('navs.frontend.user.account')
+                                            <span class="material-icons">
+                                                account_circle
+                                                </span> @lang('navs.frontend.user.account')
                                         </a>
 
                                         @can('view backend')
@@ -44,13 +46,6 @@
                                 </div>
                             </div>
 
-                            <div class="card mb-4">
-                                <div class="card-header">Header</div>
-                                <div class="card-body">
-                                    <h4 class="card-title">Info card title</h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div><!--card-->
                         </div><!--col-md-4-->
 
                         <div class="col-md-8 order-2 order-sm-1">

@@ -18,14 +18,12 @@ class HomeController extends Controller
     {
         if($user = Auth::user())
         {
-            $employees = Employee::paginate(10);
+            $employees = Employee::where('user_id','=',$user->id)->paginate(10);
             return view('internal.dashboard')
             ->with('employees', $employees);
         } else {
             return redirect()->route('frontend.auth.login');
         }
-
-
 
     }
 }
