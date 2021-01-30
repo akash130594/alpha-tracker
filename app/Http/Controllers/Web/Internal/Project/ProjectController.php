@@ -209,7 +209,6 @@ class ProjectController extends Controller
 /*------------------------------------Tested BY AS---------------------------------------------------------------------------------*/
     public function editProject(Request $request, $project_id)
     {
-        dd("tada");
         $archive_filter=null;
         $data_filtered=null;
         $archive_filter = null;
