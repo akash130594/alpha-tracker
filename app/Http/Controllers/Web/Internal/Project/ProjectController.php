@@ -514,7 +514,7 @@ class ProjectController extends Controller
         $collection = collect($get_project_details);
         $project_details = $collection->except(['code','status_id','status_label','id']);
         foreach ($project_details as $key => $value){
-           $data[$key] = $value;
+            $data[$key] = $value;
         }
         $status_data = [
             'status_id' => '1',
@@ -522,6 +522,8 @@ class ProjectController extends Controller
             'code' => $this->project_repo->generateNewProjectCode($project_details),
         ];
         $insert_data = array_merge($data,$status_data);
+        $insert_data['name'] = $insert_data['name'].' - CLONE';
+        $insert_data['label'] = $insert_data['label'].' - CLONE';
         $create_project_clone = $this->generalRepo->createCloneProject($insert_data);
         if( $create_project_clone ) {
             $vendor_data = [];
