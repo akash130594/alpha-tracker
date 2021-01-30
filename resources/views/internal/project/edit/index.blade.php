@@ -162,18 +162,17 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            @php dd("asdasaaaaas s"); @endphp
                                             <div class="row dedupe_actions_list">
                                                 <div class="dedupe_action survey_list col-12">
                                                     <label>
                                                         Dedupe From Archive:
                                                     </label>&nbsp;
-                                                    <input type="checkbox" @if($dedupe_filter['type']=="surveys_list" && !empty($dedupe_filter['archive']))) checked @endif  name="dedupe[data][archive]" value="1"><br>
+                                                    <input type="checkbox" @if($dedupe_filter && $dedupe_filter['type']=="surveys_list" && !empty($dedupe_filter['archive']))) checked @endif  name="dedupe[data][archive]" value="1"><br>
                                                     <div class="row">
                                                         <div class="form-group col-sm-12">
                                                             <div class="form-group ">
                                                                 <label for="dedupe_data_list">List Of Surveys</label>
-                                                                <textarea rows="3" type="textarea" name="dedupe[data][surveys_list]" id="dedupe_data_list" class="form-control">@if($dedupe_filter['type']=="surveys_list"){{$dedupe_filter['content']}}@endif</textarea>
+                                                                <textarea rows="3" type="textarea" name="dedupe[data][surveys_list]" id="dedupe_data_list" class="form-control">@if($dedupe_filter && $dedupe_filter['type']=="surveys_list"){{$dedupe_filter['content']}}@endif</textarea>
                                                             </div>
                                                         </div>
                                                     </div>
