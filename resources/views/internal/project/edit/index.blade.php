@@ -48,7 +48,6 @@
                                             {!!Form::text('client_project_no', 'Client Project no.', $project->client_project_no)->placeholder('Client Project/Offer ID')!!}
                                         </div>
                                     </div>
-                                    @php dd("hiii"); @endphp
                                     <div class="row">
                                         <div class="form-group col-sm-6">
                                             {!!Form::select('can_links', 'Canonical Links', [0 => 'No', 1 => 'Yes' ], $project->can_links)!!}
@@ -60,6 +59,7 @@
                                             @endif
                                         </div>
                                     </div>
+                                    @php dd("hiiee"); @endphp
                                     <div class="row">
                                         <div class="form-group col-sm-12 client_links">
                                             {!!Form::text('client_link', 'Client Link', $project->client_link)->id('client_link')->placeholder('Client Link')!!}
