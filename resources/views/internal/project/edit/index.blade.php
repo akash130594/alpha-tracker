@@ -145,24 +145,23 @@
                                                 </div>
                                                 <div class="form-group col-sm-9">
                                                     <div class="form-check form-check-inline">
-                                                        <input type="radio" class="de_dupe_selection" name="dedupe[de_dupe_type]" id="dedupe_survey_list" @if($dedupe_filter['type']=="surveys_list") checked @endif  value="surveys_list" data-target="survey_list">
+                                                        <input type="radio" class="de_dupe_selection" name="dedupe[de_dupe_type]" id="dedupe_survey_list" @if($dedupe_filter && $dedupe_filter['type']=="surveys_list") checked @endif  value="surveys_list" data-target="survey_list">
                                                         <label class="form-check-label" for="dedupe_survey_list">Surveys List</label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
-                                                        <input type="radio" class="de_dupe_selection" name="dedupe[de_dupe_type]" id="dedupe_date_range" @if($dedupe_filter['type']=="date_range") checked @endif value="date_range" data-target="date_range">
+                                                        <input type="radio" class="de_dupe_selection" name="dedupe[de_dupe_type]" id="dedupe_date_range" @if($dedupe_filter && $dedupe_filter['type']=="date_range") checked @endif value="date_range" data-target="date_range">
                                                         <label class="form-check-label" for="dedupe_date_range">Date Range</label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
-                                                        <input type="radio" class="de_dupe_selection" name="dedupe[de_dupe_type]" id="dedupe_client_dedupe" @if($dedupe_filter['type']=="client_dedupe") checked @endif value="client_dedupe" data-target="client_id">
+                                                        <input type="radio" class="de_dupe_selection" name="dedupe[de_dupe_type]" id="dedupe_client_dedupe" @if($dedupe_filter && $dedupe_filter['type']=="client_dedupe") checked @endif value="client_dedupe" data-target="client_id">
                                                         <label class="form-check-label" for="dedupe_client_dedupe">Client</label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
-                                                        <input type="radio" class="de_dupe_selection" name="dedupe[de_dupe_type]" id="dedupe_wildcard" @if($dedupe_filter['type']=="wildcard_dedupe") checked @endif value="wildcard_dedupe" data-target="wildcard_survey_name">
+                                                        <input type="radio" class="de_dupe_selection" name="dedupe[de_dupe_type]" id="dedupe_wildcard" @if($dedupe_filter && $dedupe_filter['type']=="wildcard_dedupe") checked @endif value="wildcard_dedupe" data-target="wildcard_survey_name">
                                                         <label class="form-check-label" for="dedupe_wildcard">Wildcard Name %</label>
                                                     </div>
                                                 </div>
                                             </div>
-                                            @php dd("aaaaaahello"); @endphp
                                             <div class="row dedupe_actions_list">
                                                 <div class="dedupe_action survey_list col-12">
                                                     <label>
