@@ -339,7 +339,6 @@
             }
         });
         $(document).ready(function(){
-
             $select2Opttions = {
                 width: '100%',
                 allowClear: false,
@@ -430,11 +429,7 @@
             var date = new Date();
             var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
             console.log(today);
-            $('#start_date').datepicker({
-                // format: 'YYYY-MM-DD hh:mm:ss',
-                // setDate: new Date(),
-                autoclose: true
-            });
+
 
             $('#end_date').datetimepicker({
                 timepicker:false,

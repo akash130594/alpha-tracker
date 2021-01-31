@@ -9,15 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 
-/**
- * This class is used for showing the hashing security provided to the clients, edit, create new security.
- *
- * Class ClientSecurityController
- * @author Pankaj Jha
- * @author Akash Sharma
- * @access public
- * @package  App\Http\Controllers\Web\Internal\Client\ClientSecurity\ClientSecurityController
- */
+
 
 class ClientSecurityController extends Controller
 {

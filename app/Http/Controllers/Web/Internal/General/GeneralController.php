@@ -18,15 +18,7 @@ use App\Http\Requests\Internal\General\SurveyTopic\CreateSurveyTopicRequest;
 use App\Http\Requests\Internal\General\Country\EditRequest;
 use App\Http\Requests\Internal\General\Language\EditLanguageRequest;
 
-/**
- * This class is used for updating, creating and delete countries, languages, survey topic, study type..
- *
- * Class GeneralController
- * @author Pankaj Jha
- * @author Akash Sharma
- * @access public
- * @package  App\Http\Controllers\Web\Internal\General\GeneralController
- */
+
 class GeneralController extends Controller
 {
     /**

@@ -17,15 +17,7 @@ use Illuminate\Support\Facades\DB;
 
 
 
-/**
- * This class is used to handle all the functionality as show all the details of all the clients, edit, create new clients.
- *
- * Class ClientController
- * @author Pankaj Jha
- * @author Akash Sharma
- * @access public
- * @package  App\Http\Controllers\Web\Internal\Client\ClientController
- */
+
 
 class ClientController extends Controller
 {

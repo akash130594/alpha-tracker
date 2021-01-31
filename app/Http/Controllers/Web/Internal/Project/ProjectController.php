@@ -44,16 +44,7 @@ use App\Http\Requests\Internal\Project\CreateProjectRequest;
 use App\Http\Requests\Internal\Project\EditProjectRequest;
 
 
-/**
- * This class is used to handle functionality to displaying all projects, create new projects,
- * export traffic stats of project, clone project, view links, Traffic Summary.
- *
- * Class ProjectController
- * @author Pankaj Jha
- * @author Akash Sharma
- * @access public
- * @package  App\Http\Controllers\Web\Internal\Project\ProjectController
- */
+
 class ProjectController extends Controller
 {
     /**
@@ -102,7 +93,6 @@ class ProjectController extends Controller
         $this->sourceRepo = $sourceRepo;
         //$this->detailedProfileRepo = $detailedProfileRepo;
     }
-/*--------------------------Coded By PJ Reviewed by AS--------------------------------------------------------------------------------------------------*/
 
     /**
      * This function is used to display all the project, redirect the user to all project view.
@@ -179,7 +169,7 @@ class ProjectController extends Controller
             ->with('filter_current_data',$filter_data);
 
     }
-/*------------------------------Coded By PJ Reviewed by AS----------------------------------------------------------------------------------------------*/
+
     public function datatable(Request $request)
     {
         return Laratables::recordsOf(Project::class, function($query) use ($request) {
@@ -252,7 +242,7 @@ class ProjectController extends Controller
             ->with('dedupe_filter',$dedupe_filter)
             ->with('dedupe_status',$dedupe_status);
     }
-/*-------------------------------------Coded By PJ Reviewed by AS-----------------------------------------------------------------------------------*/
+
     public function postEditProject(EditProjectRequest $request, $project_id)
     {
         $postData = $request->except('_token', '_method');
@@ -531,8 +521,6 @@ class ProjectController extends Controller
             $get_vendors_detail = $this->generalRepo->getVendorDetails($project_id);
             $get_project_quota = $this->generalRepo->getQuotaDetails($project_id);
             $get_project_custom_screener = $this->project_repo->getProjectCustomScreener($project_id);
-            /*Tested by PJ Till Here*/
-            /*Todo: Testing to be Done here*/
             if ($get_vendors_detail) {
                 $clone_vendor_details = false;
                 foreach ($get_vendors_detail as $key => $value) {

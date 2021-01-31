@@ -23,16 +23,7 @@ use App\Exceptions\Handler;
 use Freshbitsweb\Laratables\Laratables;
 
 
-/**
- * This mail is used for handling the Archive functionality of displaying all the archive data, summary, rebuild project,
- * quick export of data of archive, view details..
- *
- * Class ArchiveController
- * @author Pankaj Jha
- * @author Akash Sharma
- * @access public
- * @package  App\Http\Controllers\Web\Internal\Archive\ArchiveController
- */
+
 
 class ArchiveController extends Controller
 {

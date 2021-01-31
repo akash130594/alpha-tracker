@@ -90,6 +90,9 @@
                                         <div class="form-group col-sm-6">
                                             {!! Form::text('end_date', 'End Date', $project->end_date)->attrs(['data-toggle' => 'datetimepicker', 'data-target'=> '#end_date']) !!}
                                         </div>
+                                        <div class="form-group col-sm-6">
+                                            {!! Form::text('start_date', 'Start Date', $project->start_date)->attrs(['data-toggle' => 'datetimepicker', 'data-target'=> '#start_date']) !!}
+                                        </div>
                                     </div>
 
                                     <div class="row">

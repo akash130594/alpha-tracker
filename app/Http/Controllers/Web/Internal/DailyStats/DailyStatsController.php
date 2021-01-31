@@ -12,15 +12,7 @@ use App\Http\Controllers\Controller;
 use MongoDB\BSON\UTCDateTime;
 
 
-/**
- * This class is used for getting the daily stats od traffic of all the vendors, fulcrum, pl.
- *
- * Class DailyStatsController
- * @author Pankaj Jha
- * @author Akash Sharma
- * @access public
- * @package  App\Http\Controllers\Web\internal\DailyStats\DailyStatsController
- */
+
 
 class DailyStatsController extends Controller
 {
