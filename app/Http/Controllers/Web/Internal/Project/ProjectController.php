@@ -6,11 +6,8 @@ use App\Models\Archive\Archive;
 use App\Models\Auth\User;
 use App\Models\Client\Client;
 use App\Models\Client\ClientSecurityImpl;
-use App\Models\Project\ProjectLaratables;
-use App\Models\Project\ProjectQuota;
 use App\Models\Project\ProjectStatus;
 use App\Models\Project\ProjectVendor;
-use App\Models\Source\Source;
 use App\Models\Project\StudyType;
 use App\Models\Source\SourceType;
 use App\Models\Project\Project;
@@ -23,9 +20,6 @@ use App\Repositories\Internal\Traffic\TrafficRepository;
 use Freshbitsweb\Laratables\Laratables;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use GuzzleHttp\Exception\GuzzleException;
-use GuzzleHttp\Exception\ServerException;
-use GuzzleHttp\Client as GClient;
 use Illuminate\Support\Facades\Cache;
 use App\Repositories\Internal\Project\ProjectRepository;
 use Illuminate\Support\Facades\Redirect;
@@ -33,12 +27,7 @@ use Auth;
 use App\Repositories\Internal\General\GeneralRepository;
 use App\Repositories\Internal\Archive\ArchivesRepository;
 use MongoDB\BSON\UTCDateTime;
-use Predis\Response\Status;
-use Spatie\Html\Elements\Input;
-use Illuminate\Contracts\Support\Responsable;
 use File;
-use App\Models\Traffics\Traffic;
-use Illuminate\Support\Facades\DB;
 use App\Models\UniqueFile\UniqueFileData;
 use App\Http\Requests\Internal\Project\CreateProjectRequest;
 use App\Http\Requests\Internal\Project\EditProjectRequest;
@@ -47,11 +36,6 @@ use App\Http\Requests\Internal\Project\EditProjectRequest;
 
 class ProjectController extends Controller
 {
-    /**
-     * @var string $api_url
-     * @access protected
-     */
-    protected $api_url = 'http://sjpanel.com/api/';
 
 
     public $datatable_query;
@@ -439,50 +423,9 @@ class ProjectController extends Controller
             ->with('quotaData', $projectQuota);
     }
 
-    /*Moved to PRoject Quota Controller - Delete This after proper testing - 05/Mar/2019*/
-    /*public function updateProjectRespondents(Request $request, $id)
-    {
-        //dd($request->all());
-        $formdata = $request->except('_token', '_method');
-        $project = Project::find($id);
-
-        $this->project_repo->createProjectQuotas($project, $formdata);
-
-
-        return redirect()->route('internal.project.edit.respondent.show', [$id]);
-    }*/
-
     public function getProfileQuestions($country_code, $language_code)
     {
 
-        //Cache::flush();
-        $profileQuestions = array();
-        return Cache::remember('view.survey.quota.partial.profilequestions.'.$country_code, 600,
-            function () use ($country_code, $language_code, $profileQuestions) {
-                $client = new GClient(['base_uri' => $this->api_url]);
-
-                $queryString = [
-                    'country_code' => $country_code,
-                    'language_code' => $language_code,
-                ];
-
-                try{
-                    $response = $client->request('GET', 'project/profile-detail',[
-                        'query' => $queryString,
-                        $this->getApiHeaders(),
-                    ]);
-                } catch(ServerException $e) {
-                    dd($e->getResponse()->getBody()->getContents());
-                }
-
-                if( $response->getStatusCode() == 200 ){
-                    $profileQuestions = json_decode($response->getBody()->getContents());
-                    //dd($profileQuestions);
-
-                    // json_last_error();
-                }
-                return $profileQuestions;
-            });
     }
 
     public function getApiHeaders()
