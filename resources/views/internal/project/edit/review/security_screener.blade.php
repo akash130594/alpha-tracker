@@ -8,11 +8,11 @@
     <div class="card-body">
         <table class="col-sm-12">
             <tr>
-                <td> <label>Loi Validation:</label>&nbsp{!! (!empty($project->loi_validation))? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>&nbsp;&nbsp' !!}</td>
+                <td> <label>Loi Validation:</label>&nbsp{!! (!empty($project->loi_validation))? '<span class="material-icons">check_circle</span>' : '<span class="material-icons">cancel</span>&nbsp;&nbsp' !!}</td>
 
-                <td> <label>Loi Validation Time:</label>&nbsp{!! (!empty($project->loi_validation_time))? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>&nbsp;&nbsp' !!}</td>
+                <td> <label>Loi Validation Time:</label>&nbsp{!! (!empty($project->loi_validation_time))? '<span class="material-icons">check_circle</span>' : '<span class="material-icons">cancel</span>&nbsp;&nbsp' !!}</td>
 
-                <td> <label>Redirect Flag:</label>&nbsp{!! (!empty($clients->redirector_flag))? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>&nbsp;&nbsp' !!}</td>
+                <td> <label>Redirect Flag:</label>&nbsp{!! (!empty($clients->redirector_flag))? '<span class="material-icons">check_circle</span>' : '<span class="material-icons">cancel</span>&nbsp;&nbsp' !!}</td>
             </tr>
         </table>
     </div>

@@ -24,9 +24,9 @@
                     <td>{{$vendor->quota}}</td>
                     <td>
                         <span>
-                       {!! (!empty($vendor->global_screener))? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>&nbsp;&nbsp' !!}
-                        {!! (!empty($vendor->predefined_screener))? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>&nbsp;&nbsp' !!}
-                        {!! (!empty($vendor->custom_screener))? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>&nbsp;&nbsp' !!}
+                       {!! (!empty($vendor->global_screener))? '<span class="material-icons">check_circle</span>' : '<span class="material-icons">cancel</span>&nbsp;&nbsp' !!}
+                        {!! (!empty($vendor->predefined_screener))? '<span class="material-icons">check_circle</span>' : '<span class="material-icons">cancel</span>&nbsp;&nbsp' !!}
+                        {!! (!empty($vendor->custom_screener))? '<span class="material-icons">check_circle</span>' : '<span class="material-icons">cancel</span>&nbsp;&nbsp' !!}
                         </span>
                     </td>
                     @if($vendor->spec_quota_ids==0)
