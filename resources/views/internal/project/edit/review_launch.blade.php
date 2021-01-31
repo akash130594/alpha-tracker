@@ -33,7 +33,7 @@
                 <div class="card-footer text-center">
 
                     <button class="btn btn-lg btn-primary pull-right project_launch_btn"  style="width:20em" type="submit" @if(!$testingData) disabled="disabled" @endif>
-                        <i class="fas fa-rocket"></i> Launch
+                        <span class="material-icons">launch</span> Launch
                     </button>
                 </div>
                 {!!Form::close()!!}
