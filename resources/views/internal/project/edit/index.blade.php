@@ -103,7 +103,31 @@
                                             {!! Form::text('quota', 'Project Quota', $project->quota)->disabled(false) !!}
                                         </div>
                                     </div>
-
+                                    <div class="row">
+                                        <div class="form-group col-sm-6">
+                                            {{--Had To Produce a Range of LOI here--}}
+                                            @php
+                                                $loiValues = range(1, 60);
+                                                $loiArray = [];
+                                                foreach($loiValues as $value){
+                                                    $postfix = str_plural('minute', $value);
+                                                    $loiArray[$value] = $value.' '.$postfix;
+                                                }
+                                            @endphp
+                                            {!! Form::select('loi', 'Project LOI (in Minutes)', $loiArray, $project->loi) !!}
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            {{--Had To Produce a Range of IR here--}}
+                                            @php
+                                                $irValues = range(1, 100);
+                                                $irArray = [];
+                                                foreach($irValues as $value){
+                                                    $irArray[$value] = $value.' %';
+                                                }
+                                            @endphp
+                                            {!! Form::select('ir', 'Project IR %', $irArray, $project->ir) !!}
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="form-group col-sm-6">
                                             {!! Form::text('created_by', 'Project Manager', $project_user->name)->disabled(true) !!}

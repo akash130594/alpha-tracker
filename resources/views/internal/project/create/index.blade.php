@@ -94,8 +94,14 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="form-group col-sm-6">
+                                        {{-- <div class="form-group col-sm-6">
                                             {!! Form::text('end_date', 'End Date') !!}
+                                        </div> --}}
+                                        <div class="form-group col-sm-6">
+                                            <div class="form-group bmd-form-group">
+                                                <label for="end_date" class="bmd-label-static">End Date</label>
+                                                <input value="" type="text" name="end_date" id="end_date" class="form-control">
+                                            </div>
                                         </div>
                                         <div class="form-group col-sm-6">
                                             {{-- {!! Form::text('start_date', 'Start Date') !!} --}}
@@ -430,11 +436,14 @@
             var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
             console.log(today);
 
-
-            $('#end_date').datetimepicker({
-                timepicker:false,
-                format:'Y-m-d'
-            });
+            // jQuery('#end_date').datetimepicker({
+            //     timepicker:false,
+            //     formatDate:'Y/m/d',
+            // });
+            // $('#end_date').datetimepicker({
+            //     timepicker:false,
+            //     format:'Y-m-d'
+            // });
             $('#dedupe_from_date').datetimepicker({
                 //format: 'YYYY-MM-DD hh:mm:ss',
                 showClose: true
